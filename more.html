@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="eng">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>More</title>
+    <script type='text/javascript' src='js/jquery-11.0.min.js'></script>
+    <script type='text/javascript' src='js/unitegallery.min.js'></script>
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+    <link rel="stylesheet" href="css/style_gallery.css" type="text/css">
+    <script type='text/javascript' src='themes/compact/ug-theme-compact.js'></script>
+
+
+</head>
+
+<body>
+    <ul>
+       <!--Home button on nav bar-->
+        <div class="titlediv">
+            <li>
+                <a href="index.html">
+                    <div class="title_div"><img id="title_home" alt="home button icon" src="header/i.png"></div>
+                </a></li>
+        </div>
+<!--Nav bar-->
+        <li class="ad_nav"><a href="ad.html" id="navb">Advertising</a></li>
+        <li><a href="story.html" id="navb">Storyboards</a></li>
+        <li><a href="portraits.html" id="navb">Portraits</a></li>
+        <li><a href="books.html" id="navb">Books</a></li>
+        <li><a href="linework.html" id="navb">Linework</a></li>
+        <li><a href="edit.html" id="navb">Editorials</a></li>
+        <li><a href="more.html" id="navb">More</a></li>
+        <li class="right"><a href="learn_more.html" id="navb">Learn More</a></li>
+    </ul>
+
+    <div id="gallery" style="display:none;">
+
+        <img alt="chihuahua" src="More/9chihuahua.jpg">
+        <img alt="golf carricature" src="More/9e2maxcarricature.jpg">
+        <img alt="fern" src="More/9fern.jpg">
+        <img alt="Pukeki" src="More/9pukeko.jpg">
+        <img alt="santa card" src="More/9santacards2.jpg">
+        <img alt="austins" src="More/austins.jpg">
+        <img alt="bear" src="More/bear.jpg">
+        <img alt="bear flash" src="More/bearflash.jpg">
+        <img alt="bugatti" src="More/bugatti.jpg">
+        <img alt="capsicums" src="More/capsicums.jpg">
+        <img alt="dogs" src="More/dogs.jpg">
+        <img alt="hibiscus" src="More/hibiscus.jpg">
+        <img alt="holly the cat" src="More/holly.jpg">
+        <img alt="littlemonkeyslogo" src="More/littlemonkeyslogo.jpg">
+        <img alt="nike shoes 1" src="More/mr-shoe-1.jpg">
+        <img alt="nike shoes 2" src="More/mr-shoe-2.jpg">
+        <img alt="nike shoes 3" src="More/mr-shoe-3.jpg">
+        <img alt="nike shoes 4" src="More/mr-shoe-4.jpg">
+        <img alt="nike shoes 5" src="More/mr-shoe-5.jpg">
+        <img alt="nike shoes 6" src="More/mr-shoe-6.jpg">
+        <img alt="nike shoes 7" src="More/mr-shoe-7.jpg">
+        <img alt="Painter" src="More/painter.jpg">
+        <img alt="Pearshapped" src="More/pearshaped.jpg">
+        <img alt="pukeko" src="More/pukeko.jpg">
+        <img alt="smug pc" src="More/smug-pc.jpg">
+        <img alt="snapper-classic-logo" src="More/snapper-classic-logo.jpg">
+
+
+    </div>
+
+
+
+    
+    <footer class="footer">
+        <p id="contact1">Contact Us:</p>
+        <p id="contact2">Mobile: +64 21 742 058 <br>Email: james@illustr8.co.nz</p>
+        <a href="learn_more.html" class="lm">Learn More ></a>
+        <hr />
+        <div id="cpyr">©Copyright 2009 All images and concepts on this site are protected under international copyright laws</div>
+    </footer>
+    
+    <script type="text/javascript">
+        var api;
+
+        jQuery(document).ready(function() {
+            api = jQuery("#gallery").unitegallery();
+
+            api.resetZoom();
+            api.play();
+            api.zoomOut();
+
+
+            //those are the eventws you can use:
+
+            api.on("item_change", function(num, data) { //on item change, get item number and item data
+
+                if (console)
+                    console.log(data);
+                //do something
+            });
+
+            api.on("resize", function() { //on gallery resize
+                //do something
+            });
+
+            api.on("enter_fullscreen", function() { //on enter fullscreen
+                //do something
+            });
+
+            api.on("exit_fullscreen", function() { //on exit fulscreen
+                //do something
+            });
+
+            api.on("play", function() { //on start playing
+                //do something
+            });
+
+            api.on("stop", function() { //on stop playing
+                //do something
+            });
+
+            api.on("pause", function() { //on pause playing
+                //do something
+            });
+
+            api.on("continue", function() { //on continue playing
+                //do something
+            });
+
+
+        });
+    </script>
+
+
+
+</body>
+</html>

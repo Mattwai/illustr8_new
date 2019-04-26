@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="eng">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Books & Magazines</title>
+
+    <script type='text/javascript' src='js/jquery-11.0.min.js'></script>
+    <script type='text/javascript' src='js/unitegallery.min.js'></script>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+    <link rel="stylesheet" href="css/style_gallery.css" type="text/css">
+
+    <script type='text/javascript' src='themes/compact/ug-theme-compact.js'></script>
+
+
+</head>
+
+<body>
+
+    <ul>
+       <!--Home button on nav bar-->
+        <div class="titlediv">
+            <li>
+                <a href="index.html">
+                    <div class="title_div"><img id="title_home" alt="home button icon" src="header/i.png"></div>
+                </a></li>
+        </div>
+<!--Nav bar-->
+        <li class="ad_nav"><a href="ad.html" id="navb">Advertising</a></li>
+        <li><a href="story.html" id="navb">Storyboards</a></li>
+        <li><a href="portraits.html" id="navb">Portraits</a></li>
+        <li><a href="books.html" id="navb">Books</a></li>
+        <li><a href="linework.html" id="navb">Linework</a></li>
+        <li><a href="edit.html" id="navb">Editorials</a></li>
+        <li><a href="more.html" id="navb">More</a></li>
+        <li class="right"><a href="learn_more.html" id="navb">Learn More</a></li>
+    </ul>
+
+       <div id="gallery" style="display:none;">
+        <img alt="nz business rwc" src="Books/7nzbusrwc.jpg">
+        <img alt="snail" src="Books/7snail-derek.jpg">
+        <img alt="caravan" src="Books/8caravan.jpg">
+        <img alt="nz business - aug2011" src="Books/8nzbus.aug2011.jpg">
+        <img alt="nz business balm" src="Books/8nzbusbalmcover.jpg">
+        <img alt="nz business gunslinger" src="Books/8nzbusgunslinger.jpg">
+        <img alt="bumblebee" src="Books/9bumblebee.jpg">
+        <img alt="egg" src="Books/9egg.jpg">
+        <img alt="ice block" src="Books/9iceblock.jpg">
+        <img alt="kiwi package" src="Books/9kiwi.package.jpg">
+        <img alt="nz business - jul2010" src="Books/9nzbusjul2010.jpg">
+        <img alt="nz business - mar2010" src="Books/9nzbusmar2010.jpg">
+        <img alt="nz business nov2010" src="Books/9nzbusnov2010.jpg">
+        <img alt="vegemite" src="Books/9vegemite.jpg">
+        <img alt="wrongside1" src="Books/9wrongside1.jpg">
+        <img alt="wrongside2" src="Books/9wrongside2.jpg">
+        <img alt="wrongside3" src="Books/9wrongside3.jpg">
+        <img alt="wrongside4" src="Books/9wrongside4.jpg">
+        <img alt="wrongside5" src="Books/9wrongside5.jpg">
+        <img alt="wrongside6" src="Books/9wrongside6.jpg">
+        <img alt="home" src="Books/home.jpg">
+        <img alt="nz business - dec-jan" src="Books/nzbus-dec.jan.jpg">
+        <img alt="nz business - march" src="Books/nzbus-march.jpg">
+        <img alt="nz business - may" src="Books/nzbus-may.jpg">
+        <img alt="nz business - october" src="Books/nzbus-october.jpg">
+        <img alt="crow" src="Books/pearson-crow.jpg">
+        <img alt="eel god" src="Books/pearson-eelgod.jpg">
+        <img alt="freya" src="Books/pearson-freya.jpg">
+        <img alt="pangu" src="Books/pearson-pangu.jpg">
+        <img alt="pearson" src="Books/pearson.jpg">
+        <img alt="prodesign" src="Books/prodesign.jpg">
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        var api;
+
+        jQuery(document).ready(function() {
+            api = jQuery("#gallery").unitegallery();
+
+            api.resetZoom();
+            api.play();
+            api.zoomOut();
+
+
+            //those are the eventws you can use:
+
+            api.on("item_change", function(num, data) { //on item change, get item number and item data
+
+                if (console)
+                    console.log(data);
+                //do something
+            });
+
+            api.on("resize", function() { //on gallery resize
+                //do something
+            });
+
+            api.on("enter_fullscreen", function() { //on enter fullscreen
+                //do something
+            });
+
+            api.on("exit_fullscreen", function() { //on exit fulscreen
+                //do something
+            });
+
+            api.on("play", function() { //on start playing
+                //do something
+            });
+
+            api.on("stop", function() { //on stop playing
+                //do something
+            });
+
+            api.on("pause", function() { //on pause playing
+                //do something
+            });
+
+            api.on("continue", function() { //on continue playing
+                //do something
+            });
+
+
+        });
+    </script>
+
+<footer class="footer">
+       <p id="contact1">Contact Us:</p>
+        <p id="contact2">Mobile: +64 21 742 058 <br>Email: james@illustr8.co.nz</p>
+        <a href="learn_more.html" class="lm">Learn More ></a>
+        <hr />
+       <div id="cpyr">©Copyright 2009 All images and concepts on this site are protected under international copyright laws</div>
+   </footer>
+
+</body>
+</html>

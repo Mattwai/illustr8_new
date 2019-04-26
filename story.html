@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="eng">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Storyboards & Visuals</title>
+
+    <script type='text/javascript' src='js/jquery-11.0.min.js'></script>
+    <script type='text/javascript' src='js/unitegallery.min.js'></script>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+    <link rel="stylesheet" href="css/style_gallery.css" type="text/css">
+
+    <script type='text/javascript' src='themes/compact/ug-theme-compact.js'></script>
+
+
+</head>
+
+<body>
+    <!--Home button on nav bar-->
+    <ul>
+        <div class="titlediv">
+            <li>
+                <a href="index.html">
+                    <div class="title_div"><img id="title_home"  alt="home button icon" src="header/i.png"></div>
+                </a></li>
+        </div>
+        <!--Nav bar-->
+        <li class="ad_nav"><a href="ad.html" id="navb">Advertising</a></li>
+        <li><a href="story.html" id="navb">Storyboards</a></li>
+        <li><a href="portraits.html" id="navb">Portraits</a></li>
+        <li><a href="books.html" id="navb">Books</a></li>
+        <li><a href="linework.html" id="navb">Linework</a></li>
+        <li><a href="edit.html" id="navb">Editorials</a></li>
+        <li><a href="more.html" id="navb">More</a></li>
+        <li class="right"><a href="learn_more.html" id="navb">Learn More</a></li>
+    </ul>
+    <!--images for the gallery-->
+    <div id="gallery" style="display:none;">
+
+        <img alt="Fishing 1" src="Story/9fishing-fr1.jpg">
+        <img alt="Fishing 2" src="Story/9fishing-fr2.jpg">
+        <img alt="Fishing 3" src="Story/9fishing-fr4.jpg">
+        <img alt="Helicopter" src="Story/9gamefr1.jpg">
+        <img alt="Dart" src="Story/9gamefr2.jpg">
+        <img alt="Shooting" src="Story/9gamefr3.5.jpg">
+        <img alt="Shooter" src="Story/9gamefr3.jpg">
+        <img alt="Captured" src="Story/9gamefr4.jpg">
+        <img alt="New World " src="Story/9nwfr1.1.jpg">
+        <img alt="Man's Back" src="Story/9nwfr1.5b.jpg">
+        <img alt="Man" src="Story/9nwfr3.1.jpg">
+        <img alt="Kids shopping" src="Story/9nwfr4.jpg">
+        <img alt="Face" src="Story/9nwfr8.1.jpg">
+        <img alt="Binoculars" src="Story/9procare1.jpg">
+        <img alt="Ear" src="Story/9procare2.jpg">
+        <img alt="Innovation" src="Story/9procare3.jpg">
+        <img alt="Car Crash" src="Story/aaframe11.jpg">
+        <img alt="Car" src="Story/aaframe13.jpg">
+        <img alt="Moving" src="Story/aaframe9.jpg">
+        <img alt="Shoes 1" src="Story/adidas1.jpg">
+        <img alt="Shoes 2" src="Story/adidas2.jpg">
+        <img alt="Shoes 3" src="Story/adidas3.jpg">
+        <img alt="Shoes 4" src="Story/adidas4.jpg">
+        <img alt="Bus stop - Day" src="Story/adshell-day.jpg">
+        <img alt="Bus stop - Night" src="Story/adshell-night.jpg">
+        <img alt="Workshop" src="Story/aigframe1.jpg">
+        <img alt="Snake" src="Story/aigframe2.jpg">
+        <img alt="Dice" src="Story/aigframe3.jpg">
+        <img alt="Football team" src="Story/aigframe4.jpg">
+        <img alt="Dice roll" src="Story/aigframe5.jpg">
+        <img alt="Phone" src="Story/aigframe6.jpg">
+        <img alt="Bar" src="Story/bar3.jpg">
+        <img alt="BMW" src="Story/bmw.jpg">
+        <img alt="Butter Chicken" src="Story/butterchicken.jpg">
+        <img alt="Elevator" src="Story/bwframe11.jpg">
+        <img alt="Woman's Back" src="Story/bwframe2.jpg">
+        <img alt="Clubs" src="Story/bwframe3.jpg">
+        <img alt="Diamonds" src="Story/bwframe7.jpg">
+        <img alt="Hearts" src="Story/bwframe8.jpg">
+        <img alt="Mobile Phone" src="Story/bwphone.jpg">
+        <img alt="Car interior" src="Story/carinterior.jpg">
+        <img alt="Gravox" src="Story/cerebos.jpg">
+        <img alt="Crate" src="Story/crate-stage1.jpg">
+        <img alt="Land Cruiser" src="Story/landcruiser.jpg">
+        <img alt="Chest Tattoo" src="Story/lesmills-vis1.jpg">
+        <img alt="Back Tattoo" src="Story/lesmills-vis2.jpg">
+        <img alt="Shoulder Tattoo" src="Story/lesmills-vis3.jpg">
+        <img alt="Blocks" src="Story/megabloks.jpg">
+        <img alt="Pizza Guy" src="story/pizza-guy.jpg">
+        <img alt="OSM" src="Story/pizzabox.jpg">
+
+    </div>
+
+
+
+
+    <!--javascript for the gallery-->
+    <script type="text/javascript">
+        var api;
+
+        jQuery(document).ready(function() {
+            api = jQuery("#gallery").unitegallery();
+
+            api.resetZoom();
+            api.play();
+            api.zoomOut();
+
+            //those are the eventws you can use:
+
+            api.on("item_change", function(num, data) { //on item change, get item number and item data
+
+                if (console)
+                    console.log(data);
+                //do something
+            });
+
+            api.on("resize", function() { //on gallery resize
+                //do something
+            });
+
+            api.on("enter_fullscreen", function() { //on enter fullscreen
+                //do something
+            });
+
+            api.on("exit_fullscreen", function() { //on exit fulscreen
+                //do something
+            });
+
+            api.on("play", function() { //on start playing
+                //do something
+            });
+
+            api.on("stop", function() { //on stop playing
+                //do something
+            });
+
+            api.on("pause", function() { //on pause playing
+                //do something
+            });
+
+            api.on("continue", function() { //on continue playing
+                //do something
+            });
+
+
+        });
+
+    </script>
+
+    <!--footer-->
+    <footer class="footer">
+        <p id="contact1">Contact Us:</p>
+        <p id="contact2">Mobile: +64 21 742 058 <br>Email: james@illustr8.co.nz</p>
+        <a href="learn_more.html" class="lm">Learn More ></a>
+        <hr />
+        <div id="cpyr">©Copyright 2009 All images and concepts on this site are protected under international copyright laws</div>
+    </footer>
+
+
+</body>
+
+</html>
